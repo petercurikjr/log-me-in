@@ -29,7 +29,6 @@ function evaluateInput(mode, usernameLogin, usernameRegister, passwordLogin, pas
         }
 
         else if(mode == 'signup') {
-            console.log(passwordRegister, repeated_password)
             if(passwordRegister != repeated_password) {
                 console.log('repeated password does not equal password.')
                 postMessage(0)

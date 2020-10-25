@@ -13,33 +13,46 @@ function workerTrigger(mode) {
     if(typeof(w) == "undefined") {
         w = new Worker("worker.js")
     }
-    console.log('fff',repeated_password, 'ff', passwordRegister)
     w.postMessage([mode, usernameLogin, usernameRegister, passwordLogin, passwordRegister, repeated_password])
     w.onmessage = function(e) {
         if(e.data == 1) {
             resultlogin.innerHTML = 'Welcome, dear user.'
             resultlogin.style.opacity = '100%'
+            setTimeout(function(){
+                resultlogin.style.opacity = '0%'
+            }, 5000)
         }
 
         else if(e.data == 2) {
             resultsign.innerHTML = 'Signed up successfully.'
             resultsign.style.opacity = '100%'
+            setTimeout(function(){
+                resultsign.style.opacity = '0%'
+            }, 5000)
         }
 
         else if(e.data == 0) {
             resultsign.innerHTML = "Passwords don't match."
             resultsign.style.opacity = '100%'
+            setTimeout(function(){
+                resultsign.style.opacity = '0%'
+            }, 5000)
         }
 
         else if(e.data == -1) {
-            console.log('here out ')
-            resultlogin.innerHTML = 'Incorrect password.'
+            resultlogin.innerHTML = 'Incorrect username or password.'
             resultlogin.style.opacity = '100%'
+            setTimeout(function(){
+                resultlogin.style.opacity = '0%'
+            }, 5000)
         }
 
         else if(e.data == -2) {
             resultsign.innerHTML = 'System error encountered.'
             resultsign.style.opacity = '100%'
+            setTimeout(function(){
+                resultsign.style.opacity = '0%'
+            }, 5000)
         }
         w = undefined
     }
