@@ -16,7 +16,7 @@ function workerTrigger(mode) {
     w.postMessage([mode, usernameLogin, usernameRegister, passwordLogin, passwordRegister, repeated_password])
     w.onmessage = function(e) {
         if(e.data == 1) {
-            resultlogin.innerHTML = 'Welcome, dear user.'
+            resultlogin.innerHTML = 'Welcome, ' + usernameLogin + '.'
             resultlogin.style.opacity = '100%'
             setTimeout(function(){
                 resultlogin.style.opacity = '0%'
@@ -40,7 +40,7 @@ function workerTrigger(mode) {
         }
 
         else if(e.data == -1) {
-            resultlogin.innerHTML = 'Incorrect username or password.'
+            resultlogin.innerHTML = 'Incorrect login.'
             resultlogin.style.opacity = '100%'
             setTimeout(function(){
                 resultlogin.style.opacity = '0%'
@@ -48,7 +48,7 @@ function workerTrigger(mode) {
         }
 
         else if(e.data == -2) {
-            resultsign.innerHTML = 'System error encountered.'
+            resultsign.innerHTML = 'User exists already.'
             resultsign.style.opacity = '100%'
             setTimeout(function(){
                 resultsign.style.opacity = '0%'
