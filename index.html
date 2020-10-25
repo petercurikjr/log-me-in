@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Log me in App</title>
 </head>
 <body>
-    <h1>This is an initial test.</h1>
+    <main>
+        <div id="main-wrapper">
+            <div class="user-input-box">
+                <form>
+                    <h1>Log in</h1>
+                    <label>Username:</label>
+                    <input id="username-login">
+                    <label>Password:</label>
+                    <input type="password" id="password-login"> 
+                    <input id='authbutton' type="button" onclick="workerTrigger('login')" value="Log in"></input>
+                </form>
+                <h2 style="opacity: 0%;" id="resultlogin">...</h2>
+            </div>
+    
+            <div class="user-input-box">
+                <form>
+                    <h1>New to this site?<br>Register now.</h1>
+                    <label>Username:</label>
+                    <input id="username-register">
+                    <label >Password:</label>
+                    <input type="password" id="password-register">
+                    <label>Repeat your password:</label>
+                    <input id='password-again' type="password">
+                    <input id='signbutton' type="button" onclick="workerTrigger('signup')" value="Sign up"></input>
+                </form>
+                <h2 style="opacity: 0%;" id="resultsign">...</h2>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

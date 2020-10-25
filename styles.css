@@ -1,0 +1,119 @@
+/*
+--------GENERAL---------
+*/
+body, html {
+    background: #fdfdff;
+    font-family: 'Raleway';
+    font-size: 90%;
+    margin: 0;
+    height: 100%;
+    zoom: 0.95;
+  }
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    margin: 1em 0em 2em 0em;
+    font-weight: 100;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+label {
+    font-size: 150%;
+    font-weight: 400;
+    margin: 0em 1em;
+    text-align: center;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+    font-size: 130%;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: 1em;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    height: 35px;
+    border-radius: 4px;
+    color: black;
+    padding: 0em 1em;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+}
+
+
+/*
+--------VERIFICATION PAGE---------
+*/
+main {
+    position: relative;
+    background: #fdfdff;
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+main * {
+    transition: position .5s ease-in-out;
+}
+
+#main-wrapper {
+    background-color: #fafafa;
+    border-radius: 10px;
+    margin: 0em -20em 0em -20em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+  @-webkit-keyframes animatebottom {
+    from { bottom:-50px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  @keyframes animatebottom { 
+    from{ bottom:-50px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+.user-input-box {
+    display: flex;
+    margin: 15em auto;
+    padding: 0em 7em 0em 7em;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(250, 249, 249);
+    border-radius: 10px;
+    border: 2px solid rgb(204, 202, 202);
+    
+}
+
+#authbutton {
+    background-color: rgb(90, 223, 101);
+}
+
+#signbutton {
+    background-color: rgb(204, 202, 202);
+}
