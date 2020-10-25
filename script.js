@@ -48,7 +48,7 @@ function workerTrigger(mode) {
         }
 
         else if(e.data == -2) {
-            resultsign.innerHTML = 'User exists already.'
+            resultsign.innerHTML = 'User already exists.'
             resultsign.style.opacity = '100%'
             setTimeout(function(){
                 resultsign.style.opacity = '0%'

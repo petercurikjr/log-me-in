@@ -21,7 +21,7 @@ function evaluateInput(mode, usernameLogin, usernameRegister, passwordLogin, pas
             let data = 
             {
                 "username": usernameLogin,
-                "password": passwordRegister
+                "password": passwordLogin
             }
 
             let jsonData = JSON.stringify(data)
