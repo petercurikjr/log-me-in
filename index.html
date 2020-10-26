@@ -10,18 +10,22 @@
 <body>
     <main>
         <div id="main-wrapper">
+            <!-- login box -->
             <div class="user-input-box">
                 <form>
                     <h1>Log in</h1>
                     <label>Username:</label>
                     <input id="username-login">
                     <label>Password:</label>
-                    <input type="password" id="password-login"> 
+                    <input type="password" id="password-login">
+                    <!-- activate javascript function when Log in button is pressed  -->
                     <input id='authbutton' type="button" onclick="workerTrigger('login')" value="Log in"></input>
                 </form>
+                <!-- response from the server (changed with javascript) -->
                 <h2 style="opacity: 0%;" id="resultlogin">...</h2>
             </div>
     
+            <!-- register box -->
             <div class="user-input-box">
                 <form>
                     <h1>New to this site?<br>Register now.</h1>
@@ -31,8 +35,10 @@
                     <input type="password" id="password-register">
                     <label>Repeat your password:</label>
                     <input id='password-again' type="password">
+                    <!-- activate javascript function when Sign up button is pressed  -->
                     <input id='signbutton' type="button" onclick="workerTrigger('signup')" value="Sign up"></input>
                 </form>
+                <!-- response from the server (changed with javascript) -->
                 <h2 style="opacity: 0%;" id="resultsign">...<br>...</h2>
             </div>
         </div>
