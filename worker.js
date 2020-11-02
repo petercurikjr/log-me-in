@@ -14,11 +14,13 @@ function evaluateInput(mode, usernameLogin, usernameRegister, passwordLogin, pas
                         console.log('veryfied.')
                         //send value 1 back to script.js (which will be evaluated there)
                         postMessage(1)
+                        self.close()
                     }
                     else {
                         console.log('LOGIN: wrong username or password.')
                         //send value -1 back to script.js (which will be evaluated there)                        
                         postMessage(-1)
+                        self.close()
                     }
                 }
             }
@@ -40,6 +42,7 @@ function evaluateInput(mode, usernameLogin, usernameRegister, passwordLogin, pas
                 console.log('repeated password does not equal password.')
                 //send value 0 back to script.js (which will be evaluated there)
                 postMessage(0)
+                self.close()
                 return
             }
 
@@ -53,11 +56,13 @@ function evaluateInput(mode, usernameLogin, usernameRegister, passwordLogin, pas
                         console.log('successfully signed up.')
                         //send value 2 back to script.js (which will be evaluated there)
                         postMessage(2)
+                        self.close()
                     }
                     else {
                         console.log('SIGNUP: failed.')
                         //send value -2 back to script.js (which will be evaluated there)
                         postMessage(-2)
+                        self.close()
                     }
                 }
             }
